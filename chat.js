@@ -27,8 +27,7 @@ function sendchat(clear) {
   $("#btn-input")[0].value = "";
   if (clear != null || (chat != null && chat.length > 0)) {
     $.ajax({
-      url: 'https://cug7m0a8k0.execute-api.ap-south-1.amazonaws.com/prod?q=' + btoa(param),
-      headers: {'x-api-key':'jRtkEVy5ux7ShmWNmODh65XZi7h4EB4vaZTtVYWF'},
+      url: 'https://chat-317313.el.r.appspot.com?q=' + btoa(param),
       success: function(data) {
         //
       },
