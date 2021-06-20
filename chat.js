@@ -80,12 +80,12 @@ function fetchchat() {
       var chat = data['chat']
       for (let index in chat) {
         var text = ''
-        if (user in chat[index]) {
+        if (user == chat[index].user) {
           text += '<div class="row msg_container base_sent"><div class="messages msg_sent"><p>'
         } else {
           text += '<div class="row msg_container base_receive"><div class="messages msg_receive"><p>'
         }
-        text += chat[index][Object.keys(chat[index])[0]] + "</div></div>"
+        text += chat[index].chat + "</div></div>"
         $(".msg_container_base").append(text);
       }
       $('.msg_container_base').scrollTop($('.msg_container_base')[0].scrollHeight);
