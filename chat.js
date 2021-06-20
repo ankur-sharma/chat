@@ -74,8 +74,7 @@ function fetchchat() {
   }
   var param='fetch'
   $.ajax({
-    url: 'https://cug7m0a8k0.execute-api.ap-south-1.amazonaws.com/prod?q=' + btoa(param),
-    headers: {'x-api-key':'jRtkEVy5ux7ShmWNmODh65XZi7h4EB4vaZTtVYWF'},
+    url: 'https://chat-317313.el.r.appspot.com?q=' + btoa(param),
     success: function(data) {
       $(".messages").remove();
       var chat = data['chat']
