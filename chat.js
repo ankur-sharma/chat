@@ -27,7 +27,7 @@ function sendchat(clear) {
   $("#btn-input")[0].value = "";
   if (clear != null || (chat != null && chat.length > 0)) {
     $.ajax({
-      url: 'https://chat-317313.el.r.appspot.com?q=' + btoa(param),
+      url: server + 'q=' + btoa(param),
       success: function(data) {
         //
       },
@@ -74,7 +74,7 @@ function fetchchat() {
   }
   var param='fetch'
   $.ajax({
-    url: 'https://chat-317313.el.r.appspot.com?q=' + btoa(param),
+    url: server + '?q=' + btoa(param),
     success: function(data) {
       $(".messages").remove();
       var chat = data['chat']
@@ -96,6 +96,6 @@ function fetchchat() {
     }
   });
 }
-
+var server = "http://chat.excelmentors.in/"
 // schedule the first invocation:
 setInterval(fetchchat, 10000);
