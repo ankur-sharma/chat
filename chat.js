@@ -96,6 +96,6 @@ function fetchchat() {
     }
   });
 }
-var server = "http://chat.excelmentors.in/"
+var server = "https://chat.excelmentors.in/"
 // schedule the first invocation:
 setInterval(fetchchat, 10000);
